@@ -2,7 +2,7 @@
  * lock v11.30.4
  * 
  * Author: Auth0 <support@auth0.com> (http://auth0.com)
- * Date: 2021-08-19, 10:07:13 p.m.
+ * Date: 2021-08-19, 10:41:06 p.m.
  * License: MIT
  * 
  *//******/ (function(modules) { // webpackBootstrap
@@ -27640,6 +27640,7 @@ var Auth0APIClient = function () {
       popup: this.authOpt.popup
     });
     this.client.passwordlessLogin(verifyOptions, function (err, result) {
+      console.log({ err: err, result: result });
       return cb(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__helper__["f" /* normalizeError */])(err), result);
     });
   };
