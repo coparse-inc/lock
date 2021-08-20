@@ -41,6 +41,8 @@ class Auth0WebAPI {
   }
 
   passwordlessVerify(lockID, options, cb) {
+    console.log('passwordless normal')
+    console.log({ lockID, clientID, domain, opts })
     this.clients[lockID].passwordlessVerify(options, cb);
   }
 
