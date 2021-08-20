@@ -159,6 +159,9 @@ class Auth0APIClient {
   }
 
   passwordlessVerify(options, cb) {
+    console.log('passwordless api2');
+    console.log({ options, cb });
+    console.log(this.lockID, this.client);
     const verifyOptions = {
       ...options,
       popup: this.authOpt.popup
