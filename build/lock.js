@@ -2,7 +2,7 @@
  * lock v11.30.4
  * 
  * Author: Auth0 <support@auth0.com> (http://auth0.com)
- * Date: 7/12/2021, 2:29:41 PM
+ * Date: 2021-08-19, 10:07:13 p.m.
  * License: MIT
  * 
  *//******/ (function(modules) { // webpackBootstrap
@@ -9544,6 +9544,8 @@ var Auth0WebAPI = function () {
   };
 
   Auth0WebAPI.prototype.passwordlessVerify = function passwordlessVerify(lockID, options, cb) {
+    console.log('passwordless normal');
+    console.log({ lockID: lockID, options: options, cb: cb });
     this.clients[lockID].passwordlessVerify(options, cb);
   };
 
@@ -27631,6 +27633,9 @@ var Auth0APIClient = function () {
   };
 
   Auth0APIClient.prototype.passwordlessVerify = function passwordlessVerify(options, cb) {
+    console.log('passwordless api2');
+    console.log({ options: options, cb: cb });
+    console.log(this.lockID, this.client);
     var verifyOptions = _extends({}, options, {
       popup: this.authOpt.popup
     });
